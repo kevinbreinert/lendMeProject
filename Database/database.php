@@ -6,6 +6,7 @@ class Connection{
     private string $username = 'lendme';
     private string $password = 'lendme123';
     private string $database = 'lendme';
+
     private $conn;
 
     // Leerer Konstruktor
