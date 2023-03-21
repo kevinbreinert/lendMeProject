@@ -2,10 +2,10 @@
 class Connection{
     
     //Attribute
-    private $host = 'localhost';
-    private $username = 'lendme';
-    private $password = 'lendme123';
-    private $database = 'lendme';
+    private string $host = 'localhost';
+    private string $username = 'lendme';
+    private string $password = 'lendme123';
+    private string $database = 'lendme';
     private $conn;
 
     // Leerer Konstruktor
@@ -14,7 +14,8 @@ class Connection{
     }
 
     // Verbindung zur Datenbank
-    public function connect(){
+    public function connect(): void
+    {
         $this->conn = new mysqli($this->host, $this->username, $this->password, $this->database);
 
         if ($this->conn->connect_error) {
@@ -36,7 +37,8 @@ class Connection{
     
 
     // Verbindung schließen
-    public function close() {
+    public function close(): void
+    {
         $this->conn->close();
     }
 }
