@@ -3,9 +3,9 @@ class Connection{
     
     //Attribute
     private $host = 'localhost';
-    private $username = 'name';
-    private $password = 'passwd123';
-    private $database = 'session';
+    private $username = 'lendme';
+    private $password = 'lendme123';
+    private $database = 'lendme';
     private $conn;
 
     // Leerer Konstruktor
