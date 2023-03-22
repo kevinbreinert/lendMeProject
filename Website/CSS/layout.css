@@ -4,7 +4,7 @@
     margin-right: 200px;
     margin-top: -60px;
     background-color: #1B2223; /* Hintergrundfarbe des Buttons */
-    border: 2px solid #7E5CFE; /* Kein Rahmen um den Button */
+    border: 2px solid #5C8AFF; /* Kein Rahmen um den Button */
     color: white; /* Textfarbe des Buttons */
     padding: 10px 15px; /* Abstand zwischen Text und Rand */
     text-align: center; /* Text zentrieren */
@@ -21,8 +21,8 @@
     float: right;
     margin-right: 40px;
     margin-top: -60px;
-    background-color: #7E5CFE; /* Hintergrundfarbe des Buttons */
-    border: 2px solid #7E5CFE; /* Kein Rahmen um den Button */
+    background-color: #5C8AFF; /* Hintergrundfarbe des Buttons */
+    border: 2px solid #5C8AFF; /* Kein Rahmen um den Button */
     color: white; /* Textfarbe des Buttons */
     padding: 10px 15px; /* Abstand zwischen Text und Rand */
     text-align: center; /* Text zentrieren */
@@ -39,8 +39,45 @@
 }
 
 #button_login:hover{
-    background-color: #7E5CFE;
+    background-color: #5C8AFF;
 }
+
+.category{
+    background-color: white; /* Hintergrundfarbe des Buttons */
+    border: 1px solid gray; /* Kein Rahmen um den Button */
+    color: gray; /* Textfarbe des Buttons */
+    padding: 10px 15px; /* Abstand zwischen Text und Rand */
+    text-align: center; /* Text zentrieren */
+    text-decoration: none; /* Keine Unterstreichung des Texts */
+    display: inline-block;
+    font-size: 18px; /* Größe des Texts */
+    cursor: pointer; /* Cursor beim Hover-Effekt */
+    border-radius: 8px; /* Abgerundete Ecken */
+    transition-duration: 0.4s; /* Dauer des Hover-Effekts */
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.category:hover{
+    color: #E8A268;
+    border: 1px solid #E8A268;
+    border-radius: 8px;
+}
+.scrolling{
+    overflow-y: scroll;
+    white-space: nowrap;
+    margin-left:70px;
+    margin-right: 70px;
+    margin-top: 20px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.scrolling::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
+
 #header{
     margin-left: 40px;
     font-family: Arial;
@@ -61,11 +98,16 @@ header {
 body{
     background-size: 100%;
     margin: 0;
+    overflow-x: hidden;
 }
 
+
+body::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
 .welcome{
     background: linear-gradient(to right, #25CCFE, #8F49FF);
-    padding: 40px;
+    padding: 50px;
     text-align: center;
     font-family: Poppins;
     color: white;
@@ -73,7 +115,7 @@ body{
 }
 
 .search_box{
-    width: 800px;
+    width: 1000px;
     height: 100px;
     background-color: white;
     margin: 0 auto;
@@ -86,7 +128,7 @@ body{
     margin-top: -30px;
 }
 
-#search_bar{
+.search_bar{
     padding: 8px;
     padding-right: 130px;
     border: 2px solid lightgray;
@@ -112,6 +154,6 @@ body{
 
 #slogan{
     font-family: "Sofia", sans-serif;
-    font-size:40px;
+    font-size:45px;
 
 }
