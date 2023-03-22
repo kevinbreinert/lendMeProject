@@ -2,10 +2,12 @@
 class Connection{
     
     //Attribute
-    private string $host = 'localhost';
+    private string $host = 'bfi.bbs-me.org';
     private string $username = 'lendme';
     private string $password = 'lendme123';
     private string $database = 'lendme';
+
+    private int $port = 1568;
 
     private $conn;
 
@@ -17,10 +19,12 @@ class Connection{
     // Verbindung zur Datenbank
     public function connect(): void
     {
-        $this->conn = new mysqli($this->host, $this->username, $this->password, $this->database);
+        $this->conn = new mysqli($this->host, $this->username, $this->password, $this->database, $this->port);
 
         if ($this->conn->connect_error) {
             die("Verbindung zur Datenbank fehlgeschlagen: " . $this->conn->connect_error);
+        } else {
+            echo "funktioniert";
         }
     }
 
