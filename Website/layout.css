@@ -1,0 +1,117 @@
+#button_login{
+    float: right;
+    float: right;
+    margin-right: 200px;
+    margin-top: -60px;
+    background-color: #1B2223; /* Hintergrundfarbe des Buttons */
+    border: 2px solid #7E5CFE; /* Kein Rahmen um den Button */
+    color: white; /* Textfarbe des Buttons */
+    padding: 10px 15px; /* Abstand zwischen Text und Rand */
+    text-align: center; /* Text zentrieren */
+    text-decoration: none; /* Keine Unterstreichung des Texts */
+    display: inline-block;
+    font-size: 15px; /* Größe des Texts */
+
+    cursor: pointer; /* Cursor beim Hover-Effekt */
+    border-radius: 8px; /* Abgerundete Ecken */
+    transition-duration: 0.4s; /* Dauer des Hover-Effekts */
+}
+
+#button_register{
+    float: right;
+    margin-right: 40px;
+    margin-top: -60px;
+    background-color: #7E5CFE; /* Hintergrundfarbe des Buttons */
+    border: 2px solid #7E5CFE; /* Kein Rahmen um den Button */
+    color: white; /* Textfarbe des Buttons */
+    padding: 10px 15px; /* Abstand zwischen Text und Rand */
+    text-align: center; /* Text zentrieren */
+    text-decoration: none; /* Keine Unterstreichung des Texts */
+    display: inline-block;
+    font-size: 15px; /* Größe des Texts */
+    cursor: pointer; /* Cursor beim Hover-Effekt */
+    border-radius: 8px; /* Abgerundete Ecken */
+    transition-duration: 0.4s; /* Dauer des Hover-Effekts */
+}
+
+#button_register:hover{
+    background-color: #1B2223;
+}
+
+#button_login:hover{
+    background-color: #7E5CFE;
+}
+#header{
+    margin-left: 40px;
+    font-family: Arial;
+    color: white;
+}
+
+
+header {
+    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1B2223;
+    padding: 0.05px;
+    background-size: cover;
+
+}
+
+body{
+    background-size: 100%;
+    margin: 0;
+}
+
+.welcome{
+    background: linear-gradient(to right, #25CCFE, #8F49FF);
+    padding: 40px;
+    text-align: center;
+    font-family: Poppins;
+    color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.search_box{
+    width: 800px;
+    height: 100px;
+    background-color: white;
+    margin: 0 auto;
+    alignment: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+    margin-top: -30px;
+}
+
+#search_bar{
+    padding: 8px;
+    padding-right: 130px;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+#search_button{
+    background-color: #0099FF; /* Hintergrundfarbe des Buttons */
+    border: none;
+    color: white; /* Textfarbe des Buttons */
+    padding: 10px 15px; /* Abstand zwischen Text und Rand */
+    text-align: center; /* Text zentrieren */
+    text-decoration: none; /* Keine Unterstreichung des Texts */
+    display: inline-block;
+    font-size: 15px; /* Größe des Texts */
+    cursor: pointer; /* Cursor beim Hover-Effekt */
+    border-radius: 8px; /* Abgerundete Ecken */
+    transition-duration: 0.4s; /* Dauer des Hover-Effekts */
+
+}
+
+#slogan{
+    font-family: "Sofia", sans-serif;
+    font-size:40px;
+
+}

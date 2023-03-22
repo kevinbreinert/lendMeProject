@@ -23,8 +23,6 @@ class Connection{
 
         if ($this->conn->connect_error) {
             die("Verbindung zur Datenbank fehlgeschlagen: " . $this->conn->connect_error);
-        } else {
-            echo "funktioniert";
         }
     }
 
