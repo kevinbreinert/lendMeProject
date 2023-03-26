@@ -63,7 +63,9 @@
 .category:hover{
     color: #E8A268;
     border: 1px solid #E8A268;
+    background-color: rgba(229, 148, 67, 0.05);
     border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(229, 148, 67, 0.1);
 }
 .scrolling{
     overflow-y: scroll;
@@ -101,7 +103,13 @@ body{
     overflow-x: hidden;
 }
 
-
+footer{
+    background: linear-gradient(to right, #25CCFE, #8F49FF);
+    padding: 20px;
+    text-align: center;
+    font-family: Poppins;
+    color: white;
+}
 body::-webkit-scrollbar {
     display: none; /* for Chrome, Safari, and Opera */
 }
@@ -111,7 +119,7 @@ body::-webkit-scrollbar {
     text-align: center;
     font-family: Poppins;
     color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
 }
 
 .search_box{
@@ -165,19 +173,27 @@ body::-webkit-scrollbar {
 
 }
 
-.container {
+.color{
     width: 100%;
+    background-color: rgba(246, 245, 245, 0.72);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.container {
     overflow-x: scroll;
     white-space: nowrap;
     -ms-overflow-style: none;
     scrollbar-width: none;
     margin-top: 20px;
+    margin-bottom: 20px;
     background-color: #f6f5f5;
-    padding: 70px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
 
-
-
-
+.width_scroll_item{
+    color: rgba(0, 153, 255, 0.59)
 }
 
 .container::-webkit-scrollbar {
@@ -186,7 +202,7 @@ body::-webkit-scrollbar {
 
 .font{
     font-family: Poppins;
-    color: #555555;
+    color: black;
 }
 
 .show_items{
@@ -198,8 +214,9 @@ body::-webkit-scrollbar {
     justify-content: center;
     margin-left: 12px;
     margin-right: 12px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
+
 .show_items2 {
     display: inline-block;
     vertical-align: top;
