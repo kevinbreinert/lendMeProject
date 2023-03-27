@@ -5,7 +5,10 @@ include '../Database/database.php';
 $test = new Connection();
 $test->connect();
 
-include 'Templates/first_page.html';
+include 'Templates/Index/header.html';
 
+include 'Templates/Index/body.php';
+
+include 'Templates/Index/footer.html'
 
 ?>
