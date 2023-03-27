@@ -32,6 +32,18 @@ $db->connect();
     </form>
 </div>
 
+<?php
+    $select2 = $db->query("Select * from categories");
+    while($row = $select2->fetch_array()){
+
+        $name = $row['ctg_name'];
+        $value = $row['ctg_value'];
+
+        if(isset($_POST[$name])){
+            echo $value;
+        }
+    }
+?>
 
 <div class="font">
     <h2 style="margin-left: 150px; font-weight: bolder; margin-top:70px; display: inline-block; padding: 20px; margin-bottom:0px; border-top-right-radius: 10px;
