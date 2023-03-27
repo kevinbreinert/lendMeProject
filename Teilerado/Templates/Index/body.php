@@ -1,4 +1,9 @@
+<?php
+include 'Database/database.php';
 
+$db = new Connection();
+$db->connect();
+?>
 <!doctype html>
 <html lang="en">
 
@@ -17,21 +22,16 @@
 
 
 <div class="scrolling">
-    <form>
-        <input class="category" type="submit" name="filme" value="Filme">
-        <input class="category" type="submit" name="serien" value="Serien">
-        <input class="category" type="submit" name="serien" value="Vidospiele">
-        <input class="category" type="submit" name="serien" value="Bücher">
-        <input class="category" type="submit" name="serien" value="Musik-CDs">
-        <input class="category" type="submit" name="serien" value="Hörbücher">
-        <input class="category" type="submit" name="serien" value="Sportausrüstung">
-        <input class="category" type="submit" name="serien" value="Party- & Eventzubehör">
-        <input class="category" type="submit" name="serien" value="Kamera- & Videogeräte">
-        <input class="category" type="submit" name="serien" value="Werkzeuge & Baumaterialien">
-        <input class="category" type="submit" name="serien" value="Küchengeräte & -utensilien">
-        <input class="category" type="submit" name="serien" value="Fahrzeuge">
+    <form action="index.php" method="post">
+        <?php
+        $select = $db->query("Select * from categories");
+        while($row = $select->fetch_array()){
+            echo '<input class="category" type="submit" name="'. $row['ctg_name'].'" value="'.$row['ctg_value'].'">';
+        }
+        ?>
     </form>
 </div>
+
 
 <div class="font">
     <h2 style="margin-left: 150px; font-weight: bolder; margin-top:70px; display: inline-block; padding: 20px; margin-bottom:0px; border-top-right-radius: 10px;
