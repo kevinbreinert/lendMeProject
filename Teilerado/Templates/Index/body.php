@@ -40,14 +40,11 @@ $db->connect();
         $value = $row['ctg_value'];
 
         if(isset($_POST[$name])){
-            echo $value;
-        }
-    }
 ?>
 
 <div class="font">
-    <h2 style="margin-left: 150px; font-weight: bolder; margin-top:70px; display: inline-block; padding: 20px; margin-bottom:0px; border-top-right-radius: 10px;
-  border-top-left-radius: 10px; background: rgba(246, 245, 245, 0.72);">Vorschläge</h2>
+    <h2 style="margin-left: 150px; font-weight: bolder; margin-top:70px; display: inline-block; padding: 20px;
+    margin-bottom:0px; border-top-right-radius: 10px;border-top-left-radius: 10px; background: rgba(246, 245, 245, 0.72);"><?php echo $value; }}?></h2>
 </div>
 
 
