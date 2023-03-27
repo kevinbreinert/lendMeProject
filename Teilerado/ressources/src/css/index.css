@@ -240,14 +240,14 @@ body::-webkit-scrollbar {
 
 /* Anzeige der Kategorie in der Box*/
 .item_category{
-    color: #E8A268;
+    color: #6674CC;
     padding: 2px 8px;
-    border: 1px solid #E8A268;
+    border: 1px solid #6674CC;
     font-family: Poppins;
     display: inline-block;
     border-radius: 5px;
     margin-left: 10px;
-    background-color: rgba(229, 148, 67, 0.19);
+    background-color: rgba(102, 116, 204, 0.19);
     font-weight: 100;
     font-size: 14px;
     margin-top: 10px;

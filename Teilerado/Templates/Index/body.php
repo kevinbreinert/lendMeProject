@@ -34,17 +34,29 @@ $db->connect();
 
 <?php
     $select2 = $db->query("Select * from categories");
+    $bool = false;
     while($row = $select2->fetch_array()){
 
         $name = $row['ctg_name'];
         $value = $row['ctg_value'];
 
         if(isset($_POST[$name])){
+            $bool = true;
 ?>
 
 <div class="font">
     <h2 style="margin-left: 150px; font-weight: bolder; margin-top:70px; display: inline-block; padding: 20px;
-    margin-bottom:0px; border-top-right-radius: 10px;border-top-left-radius: 10px; background: rgba(246, 245, 245, 0.72);"><?php echo $value; }}?></h2>
+    margin-bottom:0px; border-top-right-radius: 10px;border-top-left-radius: 10px; background: rgba(246, 245, 245, 0.72);"><?php echo $value;}}?></h2>
+</div>
+
+<?php
+
+if($bool == false){
+?>
+
+<div class="font">
+    <h2 style="margin-left: 150px; font-weight: bolder; margin-top:70px; display: inline-block; padding: 20px;
+    margin-bottom:0px; border-top-right-radius: 10px;border-top-left-radius: 10px; background: rgba(246, 245, 245, 0.72);"><?php echo "Vorschläge";}?></h2>
 </div>
 
 
@@ -63,7 +75,7 @@ $db->connect();
             <a href="" class="show_items">
                 <img src="ressources/Images/test.jpg" alt="Italian Trulli" class="image"></br>
                 <p class="item_category">Wekzeuge</p></br>
-                <p class="item_category_available">Verfügbar</p></br>
+                <p class="item_category_available_soon">Bald verfügbar</p></br>
                 <p class="fa fa-location-arrow" style="margin-left: 10px; font-size: 15px; margin-top: 5px; color: gray;"></p>
                 <p class="item_location">30419 Herrenhausen</p>
                 <p class="item_name">Bohrmaschine</p></br>
@@ -71,7 +83,7 @@ $db->connect();
             <a href="" class="show_items">
                 <img src="ressources/Images/test.jpg" alt="Italian Trulli" class="image"></br>
                 <p class="item_category">Wekzeuge</p></br>
-                <p class="item_category_available">Verfügbar</p></br>
+                <p class="item_category_not_available">Nicht verfügbar</p></br>
                 <p class="fa fa-location-arrow" style="margin-left: 10px; font-size: 15px; margin-top: 5px; color: gray;"></p>
                 <p class="item_location">30419 Herrenhausen</p>
                 <p class="item_name">Bohrmaschine</p></br>
