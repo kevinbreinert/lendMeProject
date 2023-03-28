@@ -17,13 +17,15 @@ class Connection{
     }
 
     // Verbindung zur Datenbank
-    public function connect(): void
+    public function connect(): mysqli
     {
         $this->conn = new mysqli($this->host, $this->username, $this->password, $this->database, $this->port);
 
         if ($this->conn->connect_error) {
             die("Verbindung zur Datenbank fehlgeschlagen: " . $this->conn->connect_error);
         }
+
+        return $this->conn;
     }
 
 
