@@ -3,9 +3,9 @@ include '../Database/database.php';
 
 $db = new Connection();
 $db->connect();
-
+/*
 // Bild aus der Datenbank auswählen
-$result = $db->query("SELECT account_picture FROM users WHERE user_id=16");
+$result = $db->query("SELECT account_picture FROM users ");
 
 if ($result) {
     // Binären Inhalt des Bildes in einer Variable speichern
@@ -20,5 +20,9 @@ if ($result) {
     echo "Das Bild konnte nicht gefunden werden.";
 }
 
-// Verbindung schließen
-$db->close();
+*/
+$category = $db->query("select ctg_value from categories where ctg_id=1");
+
+   $category = $category->fetch_assoc()['ctg_value'];
+
+echo $category;
