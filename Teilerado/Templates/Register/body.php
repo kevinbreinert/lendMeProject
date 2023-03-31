@@ -48,11 +48,13 @@ $db->connect();
             $email = $_POST['email'];
             $passwort = $_POST['passwort'];
             $confirm = $_POST['confirm'];
-
+//
             //TODO gültige abfargen
-            $loginUser = $db->query("SELECT * from users where username='$username' AND pass='$passwort'");
+            //TODO passwort hashen und bei login abgleichen
 
-            if(mysqli_num_rows($loginUser) > 0){
+            $registerUser = $db->query("insert into users (username, pass, email) values ('$username', '$passwort', '$email')");
+            //TODO prüfen ob user und email bereits vorhanden ist
+            if($registerUser){
                 //TODO überprüfen auf groß- und kleinschreibung
                 $_SESSION['username'] = $username;
                 header('location: homepage.php');
