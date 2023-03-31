@@ -33,7 +33,7 @@ $db->connect();
 </div>
 
 <?php
-
+//test
     $select2 = $db->query("Select * from categories");
     $bool = false;
     while($row = $select2->fetch_array()){
