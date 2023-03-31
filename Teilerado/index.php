@@ -2,8 +2,8 @@
 
 include '../Database/database.php';
 
-$test = new Connection();
-$test->connect();
+$db = new Connection();
+$db->connect();
 
 include 'Templates/Index/header.html';
 
