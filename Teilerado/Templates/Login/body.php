@@ -38,7 +38,7 @@ $db->connect();
         </div>
     </div>
 </div>
-//te
+
 <?php
     if(isset($_POST['login'])){
         if(!empty($_POST['username']) && !empty($_POST['passwort'])){
@@ -47,6 +47,7 @@ $db->connect();
             $loginUser = $db->query("SELECT * from users where username='$username' AND pass='$passwort'");
 
             if(mysqli_num_rows($loginUser) > 0){
+                //TODO überprüfen auf groß- und kleinschreibung
                 $_SESSION['username'] = $username;
                 header('location: homepage.php');
             } else {

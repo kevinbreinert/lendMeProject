@@ -338,3 +338,19 @@ footer{
     filter: invert(1);
     transition-duration: 0.4s
 }
+
+#showUser{
+    color: white;
+    float: right;
+    margin-right: 40px;
+    margin-top: -60px;
+
+
+    color: white; /* Textfarbe des Buttons */
+    padding: 10px 15px; /* Abstand zwischen Text und Rand */
+    text-align: center; /* Text zentrieren */
+    text-decoration: none; /* Keine Unterstreichung des Texts */
+    display: inline-block;
+    font-size: 15px; /* Größe des Texts */
+    font-family: Poppins;
+}
