@@ -1,0 +1,64 @@
+.content_body{
+    width: 500px;
+    height: 600px;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex; /* hinzufügen */
+    align-items: center; /* hinzufügen */
+    justify-content: center;
+
+}
+
+.login{
+    margin-top: -50px;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 8px;
+    justify-content: center;
+    display: block; /* hinzufügen */
+    font-family: Poppins;
+
+}
+
+.login_input{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    border: 2px solid #5C8AFF;
+    color: black;
+    height: 40px;
+    width: 250px;
+    text-align: center;
+    font-size: 15px;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 8px;
+    justify-content: center;
+    display: block; /* hinzufügen */
+    margin: 0 auto; /* hinzufügen */
+}
+
+#login_button{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    height: 40px;
+    width: 250px;
+    border: 2px solid #5C8AFF;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: #5C8AFF;
+    color: white;
+    font-family: Poppins;
+}
+
+footer {
+position: sticky;
+bottom: 0;
+}
