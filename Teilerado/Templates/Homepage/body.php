@@ -87,9 +87,10 @@ if($bool == false){
                     echo '<p class="item_location">30419 Herrenhausen</p></br>';
                     echo '<p class="item_name">'.$item_name.'</p></br>';
                     echo '</a>';
-                }
-            ?>
+                }?>
         </div>
     </div>
 </div>
+
+
 </body>
