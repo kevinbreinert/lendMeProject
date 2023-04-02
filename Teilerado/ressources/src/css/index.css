@@ -352,5 +352,35 @@ footer{
     text-decoration: none; /* Keine Unterstreichung des Texts */
     display: inline-block;
     font-size: 15px; /* Größe des Texts */
-    font-family: Poppins;
+    font-family: Arial;
 }
+
+.showPages{
+    color: white;
+    float: left;
+    margin-left: 240px;
+    margin-top: -65px;
+
+
+    color: white; /* Textfarbe des Buttons */
+    padding: 10px 15px; /* Abstand zwischen Text und Rand */
+    text-align: center; /* Text zentrieren */
+    text-decoration: none; /* Keine Unterstreichung des Texts */
+    display: inline-block;
+    font-size: 25px; /* Größe des Texts */
+    font-family: Arial;
+}
+
+.vl {
+     border-left: 2px solid lightblue;
+     height: 50px;
+    float: left;
+    margin-left: 210px;
+    margin-top: -65px;
+
+
+
+    display: inline-block;
+
+ }
+
