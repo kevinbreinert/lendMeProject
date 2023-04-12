@@ -20,9 +20,20 @@ session_start();
 
     <div class="vl"></div>
     <p><a class="showPages" href="homepage.php">Startseite</a></p>
-    <p style="margin-left: 150px;"><a class="showPages" href="profil.php">Mein Profil</a></p>
-
-
+    <p style="margin-left: 110px;"><a class="showPages" href="profil.php">Mein Profil</a></p>
+    <div class="showPages" style="margin-left: 510px;">
+    <div class="dropdown">
+        <a class="dropbtn">Seiten</a>
+        <div class="dropdown-content">
+            <a href="myObjects.php">Meine Objekte </a>
+            <a href="lendItemFrom.php">Ausgeliehene Objekte</a>
+            <a href="reminderList.php">Merkliste</a>
+            <a href="benachrichtigung.php">Posteingang</a>
+            <a href="settings.php">Einstellungen</a>
+            <a href="logout.php">abmelden</a>
+        </div>
+    </div>
+    </div>
     <?php
     echo '<div id="showUser"> Angemeldet als: ' . $_SESSION['username'] . '</div>';
 

@@ -1,0 +1,46 @@
+.image_item{
+
+    height: 430px;
+    width: 430px; /* ersetzen Sie 200px durch die gewünschte Breite */
+    border-radius: 2px;
+    object-fit: cover;
+    align-items: center;
+    margin-top:50px;
+    display: block;
+}
+
+.image_item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}

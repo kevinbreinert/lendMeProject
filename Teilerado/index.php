@@ -5,12 +5,12 @@ include '../Database/database.php';
 $db = new Connection();
 $db->connect();
 
-include 'Templates/Index/header.html';
+include 'Templates/Index/indexHeader.html';
 
 
 
 
-include 'Templates/Index/body.php';
+include 'Templates/Index/indexBody.php';
 
 //TODO Post suchanfragen für Objekt und Ort
 
@@ -21,7 +21,6 @@ include 'Templates/Index/body.php';
 //TODO Ausgewählte Kategorie anzeigen
 
 
-
-include 'Templates/Index/footer.html'
+include 'Templates/Index/indexFooter.html'
 
 ?>

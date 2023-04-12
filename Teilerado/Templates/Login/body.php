@@ -49,6 +49,7 @@ $db->connect();
             if(mysqli_num_rows($loginUser) > 0){
                 //TODO überprüfen auf groß- und kleinschreibung
                 $_SESSION['username'] = $username;
+                $_SESSION['user_id'] = $loginUser->fetch_assoc()['user_id'];
                 header('location: homepage.php');
             } else {
                 echo "failed";

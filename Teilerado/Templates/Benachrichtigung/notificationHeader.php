@@ -23,8 +23,6 @@ session_start();
     <p><a class="showPages" href="homepage.php">Startseite</a></p>
     <p style="margin-left: 150px;"><a class="showPages" href="profil.php">Mein Profil</a></p>
 
-
-
     <?php
     echo '<div id="showUser"> Angemeldet als: ' . $_SESSION['username'] . '</div>';
 

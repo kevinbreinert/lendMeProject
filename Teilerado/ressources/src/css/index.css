@@ -67,6 +67,8 @@ body{
     background-size: 100%;
     margin: 0;
     overflow-x: hidden;
+    min-height: 100vh;
+    height: 100%;
 }
 
 body::-webkit-scrollbar {
@@ -359,15 +361,13 @@ footer{
     color: white;
     float: left;
     margin-left: 240px;
-    margin-top: -65px;
-
-
+    margin-top: -58px;
     color: white; /* Textfarbe des Buttons */
     padding: 10px 15px; /* Abstand zwischen Text und Rand */
     text-align: center; /* Text zentrieren */
     text-decoration: none; /* Keine Unterstreichung des Texts */
     display: inline-block;
-    font-size: 25px; /* Größe des Texts */
+    font-size: 18px; /* Größe des Texts */
     font-family: Arial;
 }
 
@@ -377,10 +377,56 @@ footer{
     float: left;
     margin-left: 210px;
     margin-top: -65px;
-
-
-
     display: inline-block;
-
  }
 
+.notification {
+    width: 1200px;
+    height: 80px;
+    background-color: white;
+    margin: 0 auto;
+    alignment: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+    margin-top: 50px;
+}
+
+/* Dropdown-Menü CSS */
+.dropdown {
+    position: absolute;
+    display: inline-block;
+    font-size: 18px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    white-space: nowrap; /* verhindert automatischen Umbruch */
+    left: 0; /* Dropdown-Menü wird am linken Rand des übergeordneten Elements positioniert */
+    z-index: 999;
+    border-radius: 10px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+    font-size: 18px;
+}
+
+.dropdown-content a {
+    display: block !important;
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+    z-index: 999;
+    font-size: 15px;
+
+}
+
+.dropdown-content a:hover {
+    text-decoration: underline;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block !important;
+}
