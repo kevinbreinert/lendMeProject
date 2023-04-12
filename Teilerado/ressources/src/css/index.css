@@ -240,6 +240,27 @@ body::-webkit-scrollbar {
     object-fit: cover;
 }
 
+
+
+
+.test{
+
+    margin-left:5px;
+    height: 70px;
+    width: 70px; /* ersetzen Sie 200px durch die gewünschte Breite */
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.test img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+
+
+
 /* Anzeige der Kategorie in der Box*/
 .item_category{
     color: #6674CC;
@@ -320,6 +341,15 @@ body::-webkit-scrollbar {
     font-size:18px;
 
 }
+.item_name_myObject{
+    color: #555555;
+    font-family: Poppins;
+    display: inline-block;
+    font-weight: bolder;
+    margin-left: 20px;
+    font-size:18px;
+
+}
 
 /* Damit keine Unterstriche angezeigt werden*/
 a{
@@ -390,6 +420,37 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 0px 5px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+    margin-top: 50px;
+}
+
+
+.pushObject {
+    width: 1400px;
+    height: 80px;
+    background-color: white;
+    margin: 0 auto;
+    alignment: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+    margin-top: 0px;
+}
+
+
+.myObjects {
+    width: 1100px;
+    height: 80px;
+    background-color: white;
+    margin: 0 auto;
+    alignment: center;
+    display: flex;
+    align-items: center;
+
     border-radius: 10px;
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
     margin-top: 50px;

@@ -5,7 +5,7 @@ $db = new Connection();
 $db->connect();
 
 
-include 'Templates/Homepage/homepageHeader.php';
-include 'Templates/Homepage/homepageBody.php';
-include 'Templates/Homepage/homepageFooter.html';
+include 'Templates/MyObjects/myObjectsHeader.php';
+include 'Templates/MyObjects/myObjectsBody.php';
+include 'Templates/MyObjects/myObjectsFooter.html';
 ?>
