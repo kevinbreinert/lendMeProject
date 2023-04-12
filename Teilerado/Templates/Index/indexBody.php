@@ -25,8 +25,9 @@ $db->connect();
     <form action="index.php" method="post">
         <?php
         $select = $db->query("Select * from categories");
-        while($row = $select->fetch_array()){
-            echo '<input class="category" type="submit" name="'. $row['ctg_name'].'" value="'.$row['ctg_value'].'">';
+        while($row = $select->fetch_array()) {
+            echo '<input class="category" type="submit" name="' . $row['ctg_name'] . '" value="' . $row['ctg_value'] . '">';
+
         }
         ?>
     </form>
@@ -41,6 +42,7 @@ $db->connect();
         $value = $row['ctg_value'];
 
         if(isset($_POST[$name])){
+            $clicked_ctg = $row['ctg_value'];
             $bool = true;
 ?>
 
@@ -64,28 +66,59 @@ if($bool == false){
     <div style="margin-left: auto; margin-right: auto; margin-top:100px; align-items: center; justify-content: center; margin: 100px auto;">
         <div class="grid-container">
             <?php
-                $items = $db->query("SELECT * FROM items");
+                if(empty($clicked_ctg)) {
+                    $items = $db->query("SELECT * FROM items");
 
-                while($item = $items->fetch_array()){
-                    $image = base64_encode($item['item_picture']);
-                    $category_id = $item['fk_ctg_id'];
-                    $available_id = $item['fk_av_id'];
-                    $item_name = $item['item_name'];
+                    while ($item = $items->fetch_array()) {
+                        $image = base64_encode($item['item_picture']);
+                        $category_id = $item['fk_ctg_id'];
+                        $available_id = $item['fk_av_id'];
+                        $item_name = $item['item_name'];
 
-                    $category = $db->query("select ctg_value from categories where ctg_id='$category_id'");
-                    $category = $category->fetch_assoc()['ctg_value'];
+                        $category = $db->query("select ctg_value from categories where ctg_id='$category_id'");
+                        $category = $category->fetch_assoc()['ctg_value'];
 
-                    $available = $db->query("select av_message from available where av_id='$available_id'");
-                    $available = $available->fetch_assoc()['av_message'];
+                        $available = $db->query("select av_message from available where av_id='$available_id'");
+                        $available = $available->fetch_assoc()['av_message'];
 
-                    echo '<a href="" class="show_items">';
-                    echo '<img src="data:image/jpeg;base64,' . $image . '" class="image"/>';
-                    echo '<p class="item_category">' . $category . '</p></br>';
-                    echo '<p class="item_category_available">'. $available. '</p></br>';
-                    echo '<p class="fa fa-location-arrow" style="margin-left: 10px; font-size: 15px; margin-top: 5px; color: gray;"></p>';
-                    echo '<p class="item_location">30419 Herrenhausen</p></br>';
-                    echo '<p class="item_name">'.$item_name.'</p></br>';
-                    echo '</a>';
+                        echo '<a href="" class="show_items">';
+                        echo '<img src="data:image/jpeg;base64,' . $image . '" class="image"/>';
+                        echo '<p class="item_category">' . $category . '</p></br>';
+                        echo '<p class="item_category_available">' . $available . '</p></br>';
+                        echo '<p class="fa fa-location-arrow" style="margin-left: 10px; font-size: 15px; margin-top: 5px; color: gray;"></p>';
+                        echo '<p class="item_location">30419 Herrenhausen</p></br>';
+                        echo '<p class="item_name">' . $item_name . '</p></br>';
+                        echo '</a>';
+                    }
+                } else {
+
+                    $ctg_id = $db->query("select ctg_id from categories where ctg_value='$clicked_ctg'");
+                    $ctg_id = $ctg_id->fetch_assoc()['ctg_id'];
+
+
+                    $items = $db->query("SELECT * FROM items WHERE fK_ctg_id={$ctg_id}");
+
+                    while ($item = $items->fetch_array()) {
+                        $image = base64_encode($item['item_picture']);
+                        $category_id = $item['fk_ctg_id'];
+                        $available_id = $item['fk_av_id'];
+                        $item_name = $item['item_name'];
+
+                        $category = $db->query("select ctg_value from categories where ctg_id='$category_id'");
+                        $category = $category->fetch_assoc()['ctg_value'];
+
+                        $available = $db->query("select av_message from available where av_id='$available_id'");
+                        $available = $available->fetch_assoc()['av_message'];
+
+                        echo '<a href="" class="show_items">';
+                        echo '<img src="data:image/jpeg;base64,' . $image . '" class="image"/>';
+                        echo '<p class="item_category">' . $category . '</p></br>';
+                        echo '<p class="item_category_available">' . $available . '</p></br>';
+                        echo '<p class="fa fa-location-arrow" style="margin-left: 10px; font-size: 15px; margin-top: 5px; color: gray;"></p>';
+                        echo '<p class="item_location">30419 Herrenhausen</p></br>';
+                        echo '<p class="item_name">' . $item_name . '</p></br>';
+                        echo '</a>';
+                    }
                 }
             ?>
         </div>
