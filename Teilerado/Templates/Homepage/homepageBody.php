@@ -11,6 +11,7 @@ function showItem($items)
 
     while ($item = $items->fetch_array()) {
         $image = base64_encode($item['item_picture']);
+        $item_id = $item['item_id'];
         $category_id = $item['fk_ctg_id'];
         $available_id = $item['fk_av_id'];
         $item_name = $item['item_name'];
@@ -23,7 +24,7 @@ function showItem($items)
         $available = $db->query("select av_message from available where av_id='$available_id'");
         $available = $available->fetch_assoc()['av_message'];
 
-        echo '<a href="" class="show_items">';
+        echo '<a href="item.php?id=' . $item_id . '" class="show_items">';
         echo '<img src="data:image/jpeg;base64,' . $image . '" class="image"/>';
         echo '<p class="item_category">' . $category . '</p></br>';
         echo '<p class="item_category_available">' . $available . '</p></br>';
