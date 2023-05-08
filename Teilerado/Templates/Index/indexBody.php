@@ -1,13 +1,49 @@
 <?php
-include '../../../Database/database.php';
+//include '../../../Database/database.php';
 
-$db = new Connection();
-$db->connect();
+//$db = new Connection();
+//$db->connect();
+
+
+// Verbindungseinstellungen
+$servername = "localhost";
+$username = "lendme";
+$password = "lendme123";
+$dbname = "lendme";
+
+// Verbindung herstellen
+$db = mysqli_connect($servername, $username, $password, $dbname);
+
+// Verbindung prüfen
+if (!$db) {
+    die("Verbindung fehlgeschlagen: " . mysqli_connect_error());
+}
+echo "Verbindung erfolgreich hergestellt!";
+
 function showItem($items)
 
 {
-    $db = new Connection();
-    $db->connect();
+    //$db = new Connection();
+    //$db->connect();
+
+
+
+    // Verbindungseinstellungen
+    $servername = "localhost";
+    $username = "lendme";
+    $password = "lendme123";
+    $dbname = "lendme";
+
+// Verbindung herstellen
+    $db = mysqli_connect($servername, $username, $password, $dbname);
+
+// Verbindung prüfen
+    if (!$db) {
+        die("Verbindung fehlgeschlagen: " . mysqli_connect_error());
+    }
+    echo "Verbindung erfolgreich hergestellt!";
+
+
 
     while ($item = $items->fetch_array()) {
         $image = base64_encode($item['item_picture']);
