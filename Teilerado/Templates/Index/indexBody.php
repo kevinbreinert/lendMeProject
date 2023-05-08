@@ -3,7 +3,6 @@ include '../../../Database/database.php';
 
 $db = new Connection();
 $db->connect();
-
 function showItem($items)
 
 {
