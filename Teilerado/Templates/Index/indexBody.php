@@ -1,5 +1,5 @@
 <?php
-include 'Database/database.php';
+include '../../../Database/database.php';
 
 $db = new Connection();
 $db->connect();
