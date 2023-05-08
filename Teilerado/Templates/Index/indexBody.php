@@ -23,19 +23,8 @@ echo "Verbindung erfolgreich hergestellt!";
 function showItem($items)
 
 {
-    //$db = new Connection();
-    //$db->connect();
-
-
-
-    // Verbindungseinstellungen
-    $servername = "localhost";
-    $username = "lendme";
-    $password = "lendme123";
-    $dbname = "lendme";
-
-// Verbindung herstellen
-    $db = mysqli_connect($servername, $username, $password, $dbname);
+    $db = new Connection();
+    $db->connect();
 
     while ($item = $items->fetch_array()) {
         $image = base64_encode($item['item_picture']);
