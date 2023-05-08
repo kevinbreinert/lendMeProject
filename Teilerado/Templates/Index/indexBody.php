@@ -37,14 +37,6 @@ function showItem($items)
 // Verbindung herstellen
     $db = mysqli_connect($servername, $username, $password, $dbname);
 
-// Verbindung prüfen
-    if (!$db) {
-        die("Verbindung fehlgeschlagen: " . mysqli_connect_error());
-    }
-    echo "Verbindung erfolgreich hergestellt!";
-
-
-
     while ($item = $items->fetch_array()) {
         $image = base64_encode($item['item_picture']);
         $category_id = $item['fk_ctg_id'];

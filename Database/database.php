@@ -1,49 +1,30 @@
 <?php
-class Connection{
-    
-    //Attribute
+class Connection {
     private string $host = 'localhost';
     private string $username = 'lendme';
     private string $password = 'lendme123';
     private string $database = 'lendme';
-
-    //private int $port = 1568;
-
     private $conn;
 
-    // Leerer Konstruktor
-    public function __construct(){
-       
-    }
+    public function __construct() {}
 
-    // Verbindung zur Datenbank
-    public function connect(): mysqli
-    {
+    public function connect(): mysqli {
         $this->conn = new mysqli($this->host, $this->username, $this->password, $this->database);
-
         if ($this->conn->connect_error) {
             die("Verbindung zur Datenbank fehlgeschlagen: " . $this->conn->connect_error);
         }
-
         return $this->conn;
     }
 
-
-    // Methoden
-
-    // Abfrage SQL
     public function query($query) {
         $result = $this->conn->query($query);
         if (!$result) {
-            die("Abfrage fehlgeschlagen: " . $this->conn->error);
+            die("Abfrage fehlgeschlagen: " . mysqli_error($this->conn));
         }
         return $result;
     }
-    
 
-    // Verbindung schließen
-    public function close(): void
-    {
+    public function close() {
         $this->conn->close();
     }
 }
