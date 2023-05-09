@@ -404,10 +404,8 @@ footer{
 
 .vl {
      border-left: 2px solid lightblue;
-     height: 50px;
-    float: left;
-    margin-left: 210px;
-    margin-top: -65px;
+     height: 5px;
+
     display: inline-block;
  }
 
