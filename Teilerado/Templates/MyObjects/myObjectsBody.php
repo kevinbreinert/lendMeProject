@@ -2,7 +2,7 @@
 include 'Database/database.php';
 $db = new Connection();
 $db->connect();
-
+include '../../funktionen.php'
 ?>
 <!doctype html>
 
@@ -90,8 +90,10 @@ while($object = $myObjects->fetch_array()) {
     echo '<p class="item_category_available">' . $available . '</p></br>';
     echo '<p class="fa fa-location-arrow" style="margin-left: 10px; font-size: 15px; margin-top: 5px; color: gray;">';
     echo '<p class="item_location" style="margin-left: 5px;">'. $item_plz. " " .$item_location.' </p>';
+    //echo '<p>' . ''. '</p>';
     echo '</div>';
 
-}?>
+}
+?>
 </body>
 </html>

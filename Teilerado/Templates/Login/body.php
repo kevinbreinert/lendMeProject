@@ -24,7 +24,7 @@ $db->connect();
         <form class="login_formular" action="" method="post">
             <input class="login_input" type="text" placeholder="Benutzername oder Email" name="username"></br>
             <input class="login_input" type="password" placeholder="Passwort" name="passwort"></br>
-            <input class="login_button" type="submit" name="login" value="Einloggen">
+            <input class="login_button2" type="submit" name="login" value="Einloggen">
         </form>
 
 

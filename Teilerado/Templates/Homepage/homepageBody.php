@@ -1,8 +1,11 @@
 <?php
+
 include 'Database/database.php';
 
 $db = new Connection();
 $db->connect();
+
+
 function showItem($items)
 
 {
@@ -27,7 +30,15 @@ function showItem($items)
         echo '<a href="item.php?id=' . $item_id . '" class="show_items">';
         echo '<img src="data:image/jpeg;base64,' . $image . '" class="image"/>';
         echo '<p class="item_category">' . $category . '</p></br>';
-        echo '<p class="item_category_available">' . $available . '</p></br>';
+        if($available_id == 1){
+            echo '<p class="item_category_available">' . $available . '</p></br>';
+        }
+        elseif ($available_id == 2){
+            echo '<p class="item_category_available_soon">' . $available . '</p></br>';
+        }
+        elseif ($available_id == 3){
+            echo '<p class="item_category_not_available">' . $available . '</p></br>';
+        }
         echo '<p class="fa fa-location-arrow" style="margin-left: 10px; font-size: 15px; margin-top: 5px; color: gray;"></p>';
         echo '<p class="item_location" style="margin-left: 5px;">'. $item_plz. " " .$item_location.' </p></br>';
         echo '<p class="item_name">' . $item_name . '</p></br>';

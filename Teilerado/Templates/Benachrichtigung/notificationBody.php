@@ -23,13 +23,19 @@ while($notifaction = $notifactions->fetch_array()) {
     $start_date = $notifaction['start_date'];
     $end_date = $notifaction['end_date'];
 
-    $item_name = $db->query("select item_name from items where item_id='$item_id'");
-    $item_name = $item_name->fetch_assoc()['item_name'];
+    $items = $db->query("select * from items where item_id='$item_id'");
+    while($item = $items->fetch_array()){
+        $item_name = $item['item_name'];
+        $image = base64_encode($item['item_picture']);
+    }
+
+
 
     $customer = $db->query("select username from users where user_id='$customer_id'");
     $customer = $customer->fetch_assoc()['username'];
 
     echo '<div class="notification">';
+    echo '<img src="data:image/jpeg;base64,' . $image . '" class="test"/>';
     echo '<p style="padding-right: 20px;">Benutzer: ' . $customer . '</p>';
     echo '<p style="padding-right: 20px;">Objekt: ' . $item_name . '</p>';
     echo '<p style="padding-right: 20px;">Start: ' . $start_date . '</p>';

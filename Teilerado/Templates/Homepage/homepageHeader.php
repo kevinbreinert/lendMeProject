@@ -1,4 +1,6 @@
 <?php
+$lebensdauer = 30; // 30 Minuten in Sekunden
+session_set_cookie_params($lebensdauer);
 session_start();
 ?>
 <!doctype html>
