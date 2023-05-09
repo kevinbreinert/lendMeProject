@@ -43,7 +43,7 @@
     margin: 0 auto; /* hinzufügen */
 }
 
-#login_button{
+.login_button2{
     margin-top: 30px;
     margin-bottom: 10px;
     height: 40px;
