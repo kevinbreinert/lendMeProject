@@ -21,7 +21,7 @@
             </li>
             <li class="notActive"><a href="homepage.php">Startseite</a></li>
             <li class="notActive"><a href="myObjects.php">Meine Objekte</a></li>
-            <li class="notActive"><a href="lendItemFrom.php">Ausgeliehene Objekte</a></li>
+            <li class="notActive"><a href="myLendObjects.php">Ausgeliehene Objekte</a></li>
             <li class="notActive"><a href="benachrichtigung.php">Posteingang</a></li>
             <li class="isActive"><a href="settings.php">Einstellungen</a></li>
             <li id="logout"><a href="logout.php">Abmelden</a></li>

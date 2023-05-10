@@ -21,12 +21,17 @@ $db->connect();
 
         <h2 id="login_title">Zurücksetzen</h2>
 
-        <form class="login_formular" action="" method="post">
+        <form class="login_formular" action="username.reset.php" method="post">
             <input class="login_button2" type="submit" name="username" value="Nutzername">
-            <input class="login_button2" type="submit" name="email" value="Email"">
-            <input class="login_button2" type="submit" name="password" value="Passwort">
         </form>
 
+        <form class="login_formular" action="email.reset.php" method="post">
+            <input class="login_button2" type="submit" name="email" value="Email"">
+        </form>
+
+        <form class="login_formular" action="passwort.reset.php" method="post">
+            <input class="login_button2" type="submit" name="passwort" value="Passwort">
+        </form>
 
 
     </div>

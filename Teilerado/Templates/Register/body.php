@@ -26,7 +26,7 @@ $db->connect();
             <input class="login_input" type="text" placeholder="Email" name="email"></br>
             <input class="login_input" type="password" placeholder="Passwort" name="passwort"></br>
             <input class="login_input" type="password" placeholder="Passwort bestätigen" name="confirm"></br>
-            <input id="login_button" type="submit" name="register" value="Einloggen">
+            <input class="login_button2" type="submit" name="register" value="Einloggen">
         </form>
 
 

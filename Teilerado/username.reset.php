@@ -28,82 +28,23 @@ $db->connect();
     <nav>
         <ul class="nav-links">
             <li class="logo">
-                <a href="" style="font-size: 25px;">Teilerado</a>
+                <a href="homepage.php" style="font-size: 25px;">Teilerado</a>
             </li>
-            <li class="isActive"><a href="homepage.php">Startseite</a></li>
-            <li><a href="myObjects.php">Meine Objekte</a></li>
-            <li><a href="lendItemFrom.php">Ausgeliehene Objekte</a></li>
-            <li><a href="benachrichtigung.php">Posteingang</a></li>
-            <li><a href="settings.php">Einstellungen</a></li>
+            <li class="notActive"><a href="homepage.php">Startseite</a></li>
+            <li class="notActive"><a href="myObjects.php">Meine Objekte</a></li>
+            <li class="notActive"><a href="myLendObjects.php">Ausgeliehene Objekte</a></li>
+            <li class="notActive"><a href="benachrichtigung.php">Posteingang</a></li>
+            <li class="isActive"><a href="settings.php">Einstellungen</a></li>
             <li id="logout"><a href="logout.php">Abmelden</a></li>
             <li class="showUser" style="border: 2px solid #9354f6; margin-right: 0px; border-radius: 10px; padding: 10px; box-shadow: 0 0 10px 0px rgb(147,84,246);; font-size: 13px">
                 Angemeldet als: <?php echo $_SESSION['username']; ?>
             </li>
         </ul>
     </nav>
+
 </header>
 
-<style>
 
-    .nav-links {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        margin: 0;
-        padding: 15px;
-        list-style: none;
-        width: 100%;
-
-    }
-    .nav-links li {
-        margin: 0 10px;
-    }
-    .nav-links li:first-child {
-        margin-left: 0;
-    }
-    .nav-links li:last-child {
-        margin-right: 0;
-    }
-    .isActive{
-        color: #93bcff;
-        border-color: #4992ff;
-        box-shadow: 0 0 10px 0 rgb(73,146,255);
-    }
-    .nav-links a {
-        display: inline-block;
-        color: #fff;
-        font-size: 16px;
-        text-decoration: none;
-        font-family: Poppins;
-        padding: 8px;
-        border: 2px solid transparent; /* initial border color is transparent */
-        border-radius: 10px;
-        transition-duration: 0.6s; /* Dauer des Hover-Effekts */
-    }
-
-    .nav-links a:hover {
-        color: #93bcff;
-        border-color: #4992ff;
-        box-shadow: 0 0 10px 0px rgb(73,146,255);
-    }
-    .logo {
-        display: inline-block;
-        margin-right: 20px;
-        padding-right: 20px;
-        border-right: 1px solid #ccc;
-    }
-    .showUser {
-        color: #b996ef;
-        font-family: Poppins;
-
-    }
-    #logout a:hover{
-        color: #ff7272;
-        box-shadow: 0 0 5px 0px rgb(243,90,90);
-        border-color: #f35a5a;|; /* change border color on hover */
-    }
-</style>
 
 <body>
 <div class="content_body">
@@ -139,6 +80,7 @@ if(isset($_POST['changeUsername'])){
                 echo "Nutzername wurde geändert!";
                 $_SESSION['username'] = $newUsername;
                 header('location: views/success.php');
+                ob_end_flush(); // Flush buffer and send output to browser
             } else {
                 echo "passwort konnte nicht geändert werden";
             }
@@ -156,4 +98,78 @@ if(isset($_POST['changeUsername'])){
         <a href="https://github.com/kevinbreinert/lendMeProject"  target="_blank"><i class="fa fa-github" style="font-size:35px; margin-left: 20px; vertical-align: middle; color: white; transition-duration: 0.4s"></i></a>
     </p>
 </footer>
+
+<style>
+    .nav-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        margin: 0;
+        padding: 15px;
+        list-style: none;
+        width: 100%;
+
+    }
+    .nav-links li {
+        margin: 0 10px;
+    }
+    .nav-links li:first-child {
+        margin-left: 0;
+    }
+    .nav-links li:last-child {
+        margin-right: 0;
+    }
+    .nav-links a {
+        display: inline-block;
+        color: #fff;
+        font-size: 16px;
+        text-decoration: none;
+        font-family: Poppins;
+        padding: 8px;
+        border: 2px solid transparent; /* initial border color is transparent */
+        border-radius: 15px;
+        transition-duration: 0.8s; /* Dauer des Hover-Effekts */
+    }
+    .isActive{
+        color: #93bcff;
+        border-bottom: 2px solid #4992ff; /* initial border color is transparent */
+        border-radius: 0px;
+        box-shadow: 0 1px 0px 0px rgb(73,146,255);
+    }
+    .notActive a:hover{
+        color: #93bcff;
+        border-bottom: 2px solid transparent; /* initial border color is transparent */
+        border-radius: 0px;
+        box-shadow: 0 1px 0px 0px rgb(73,146,255);
+    }
+    .isActive a:hover{
+        color: #93bcff;
+        border-bottom: 2px solid transparent; /* initial border color is transparent */
+        border-radius: 0px;
+        box-shadow: 0 1px 0px 0px rgb(73,146,255);
+    }
+    .nav-links a:hover {
+        color: #93bcff;
+        border-color: #4992ff;
+        box-shadow: 0 0 10px 0px rgb(73,146,255);
+    }
+    .logo {
+        display: inline-block;
+        margin-right: 20px;
+        padding-right: 20px;
+        border-right: 1px solid #ccc;
+    }
+    .showUser {
+        color: #b996ef;
+        font-family: Poppins;
+
+    }
+    #logout a:hover{
+        color: #ff7272;
+        box-shadow: 0 0 5px 0px rgb(243,90,90);
+        border-color: #f35a5a;|; /* change border color on hover */
+    }
+</style>
+
 </html>

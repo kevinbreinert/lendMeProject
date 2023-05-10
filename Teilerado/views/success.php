@@ -1,5 +1,5 @@
 <?php
-header("refresh: 3; url=http://localhost/lendMeProject/Teilerado/homepage.php");
+header("refresh: 1; url=http://localhost/lendMeProject/Teilerado/homepage.php");
 ?>
 
 <!DOCTYPE html>

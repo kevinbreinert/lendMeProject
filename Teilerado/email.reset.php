@@ -33,7 +33,7 @@ $db->connect();
             </li>
             <li><a href="homepage.php">Startseite</a></li>
             <li><a href="myObjects.php">Meine Objekte</a></li>
-            <li><a href="lendItemFrom.php">Ausgeliehene Objekte</a></li>
+            <li><a href="myLendObjects.php">Ausgeliehene Objekte</a></li>
             <li><a href="benachrichtigung.php">Posteingang</a></li>
             <li><a href="settings.php">Einstellungen</a></li>
             <li id="logout"><a href="logout.php">Abmelden</a></li>
