@@ -17,14 +17,94 @@ session_start();
   <title>Document</title>
 </head>
 <header>
-  <h1 id="header">Teilerado</h1>
-
-    <div class="vl"></div>
-    <p><a class="showPages" href="homepage.php">Startseite</a></p>
-    <p style="margin-left: 150px;"><a class="showPages" href="profil.php">Mein Profil</a></p>
-
-    <?php
-    echo '<div id="showUser"> Angemeldet als: ' . $_SESSION['username'] . '</div>';
-
-    ?>
+  <nav>
+    <ul class="nav-links">
+      <li class="logo">
+        <a href="homepage.php" style="font-size: 25px;">Teilerado</a>
+      </li>
+      <li class="notActive"><a href="homepage.php">Startseite</a></li>
+      <li class="isActive"><a href="myObjects.php">Meine Objekte</a></li>
+      <li class="notActive"><a href="lendItemFrom.php">Ausgeliehene Objekte</a></li>
+      <li class="notActive"><a href="benachrichtigung.php">Posteingang</a></li>
+      <li class="notActive"><a href="settings.php">Einstellungen</a></li>
+      <li id="logout"><a href="logout.php">Abmelden</a></li>
+      <li class="showUser" style="border: 2px solid #9354f6; margin-right: 0px; border-radius: 10px; padding: 10px; box-shadow: 0 0 10px 0px rgb(147,84,246);; font-size: 13px">
+        Angemeldet als: <?php echo $_SESSION['username']; ?>
+      </li>
+    </ul>
+  </nav>
 </header>
+
+<style>
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    padding: 15px;
+    list-style: none;
+    width: 100%;
+
+  }
+  .nav-links li {
+    margin: 0 10px;
+  }
+  .nav-links li:first-child {
+    margin-left: 0;
+  }
+  .nav-links li:last-child {
+    margin-right: 0;
+  }
+  .nav-links a {
+    display: inline-block;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: Poppins;
+    padding: 8px;
+    border: 2px solid transparent; /* initial border color is transparent */
+    border-radius: 15px;
+    transition-duration: 0.8s; /* Dauer des Hover-Effekts */
+  }
+  .isActive{
+    color: #93bcff;
+    border-bottom: 2px solid #4992ff; /* initial border color is transparent */
+    border-radius: 0px;
+    box-shadow: 0 1px 0px 0px rgb(73,146,255);
+  }
+  .notActive a:hover{
+    color: #93bcff;
+    border-bottom: 2px solid transparent; /* initial border color is transparent */
+    border-radius: 0px;
+    box-shadow: 0 1px 0px 0px rgb(73,146,255);
+  }
+  .isActive a:hover{
+    color: #93bcff;
+    border-bottom: 2px solid transparent; /* initial border color is transparent */
+    border-radius: 0px;
+    box-shadow: 0 1px 0px 0px rgb(73,146,255);
+  }
+  .nav-links a:hover {
+    color: #93bcff;
+    border-color: #4992ff;
+    box-shadow: 0 0 10px 0px rgb(73,146,255);
+  }
+  .logo {
+    display: inline-block;
+    margin-right: 20px;
+    padding-right: 20px;
+    border-right: 1px solid #ccc;
+  }
+  .showUser {
+    color: #b996ef;
+    font-family: Poppins;
+
+  }
+  #logout a:hover{
+    color: #ff7272;
+    box-shadow: 0 0 5px 0px rgb(243,90,90);
+    border-color: #f35a5a;|; /* change border color on hover */
+  }
+</style>

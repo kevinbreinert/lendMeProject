@@ -23,11 +23,11 @@ session_start();
             <li class="logo">
                 <a href="homepage.php" style="font-size: 25px;">Teilerado</a>
             </li>
-            <li><a href="homepage.php">Startseite</a></li>
-            <li><a href="myObjects.php">Meine Objekte</a></li>
-            <li><a href="lendItemFrom.php">Ausgeliehene Objekte</a></li>
-            <li><a href="benachrichtigung.php">Posteingang</a></li>
-            <li><a href="settings.php">Einstellungen</a></li>
+            <li class="isActive"><a href="homepage.php">Startseite</a></li>
+            <li class="notActive"><a href="myObjects.php">Meine Objekte</a></li>
+            <li class="notActive"><a href="lendItemFrom.php">Ausgeliehene Objekte</a></li>
+            <li class="notActive"><a href="benachrichtigung.php">Posteingang</a></li>
+            <li class="notActive"><a href="settings.php">Einstellungen</a></li>
             <li id="logout"><a href="logout.php">Abmelden</a></li>
             <li class="showUser" style="border: 2px solid #9354f6; margin-right: 0px; border-radius: 10px; padding: 10px; box-shadow: 0 0 10px 0px rgb(147,84,246);; font-size: 13px">
                 Angemeldet als: <?php echo $_SESSION['username']; ?>
@@ -66,10 +66,27 @@ session_start();
         font-family: Poppins;
         padding: 8px;
         border: 2px solid transparent; /* initial border color is transparent */
-        border-radius: 10px;
-        transition-duration: 0.6s; /* Dauer des Hover-Effekts */
+        border-radius: 15px;
+        transition-duration: 0.8s; /* Dauer des Hover-Effekts */
     }
-
+    .isActive{
+        color: #93bcff;
+        border-bottom: 2px solid #4992ff; /* initial border color is transparent */
+        border-radius: 0px;
+        box-shadow: 0 1px 0px 0px rgb(73,146,255);
+    }
+    .notActive a:hover{
+        color: #93bcff;
+        border-bottom: 2px solid transparent; /* initial border color is transparent */
+        border-radius: 0px;
+        box-shadow: 0 1px 0px 0px rgb(73,146,255);
+    }
+    .isActive a:hover{
+        color: #93bcff;
+        border-bottom: 2px solid transparent; /* initial border color is transparent */
+        border-radius: 0px;
+        box-shadow: 0 1px 0px 0px rgb(73,146,255);
+    }
     .nav-links a:hover {
         color: #93bcff;
         border-color: #4992ff;
